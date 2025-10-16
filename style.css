@@ -1,0 +1,336 @@
+
+/* RESET ET BASE GLOBALE */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Manrope', 'Gill Sans', 'Segoe UI', sans-serif;
+  background-color: #f8f8f8;
+  color: #222;
+}
+
+
+/* HEADER */
+
+header {
+  background-color: #777;
+  color: white;
+  text-align: center;
+  padding: 40px 10px;
+  border-bottom: 1px solid #444;
+  text-shadow: 2px 2px 2px black;
+}
+
+header h1 {
+  font-size: 2.8vw;
+  letter-spacing: 3px;
+}
+
+header h2 {
+  font-size: 1.8vw;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+
+/* NAVIGATION */
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(186, 177, 177);
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+  height: 50px;
+  gap: 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  background-color: gray;
+  border-radius: 6px;
+  padding: 8px 15px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 1px 1px 2px black;
+  font-weight: 500;
+  margin: 10px 0px;
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #555;
+  box-shadow: 2px 2px 4px black;
+}
+
+
+/* LAYOUT PRINCIPAL */
+
+main {
+  display: flex;
+  flex: 1;
+  width: 90%;
+  max-width: 1300px;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+.principale {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+
+/* ASIDE */
+
+aside {
+  border: 1px dotted #999;
+  padding: 10px;
+  background-color: #fafafa;
+  border-radius: 5px;
+  text-align: center;
+}
+
+aside img {
+  width: 250px;
+  border-radius: 15px;
+  margin: 20px 0;
+  object-fit: cover;
+}
+
+aside ul {
+  list-style: none;
+  text-align: left;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+aside .information {
+  background-color: bisque;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 1px 1px 2px #333;
+}
+
+aside .evaluation {
+  text-align: left;
+  width: 90%;
+  margin: 10px auto;
+  font-size: 14px;
+}
+
+progress {
+  width: 100%;
+  margin: 5px 0 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 10px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #ccc;
+  border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #5f9ea0;
+  border-radius: 5px;
+}
+
+
+/* SECTIONS */
+
+section {
+  background-color: white;
+  border: 1px dotted #aaa;
+  border-radius: 5px;
+  padding: 15px 20px;
+  overflow-y: auto;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+section .information {
+  text-align: center;
+  background-color: bisque;
+  padding: 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  box-shadow: 1px 1px 2px black;
+}
+
+section p {
+  line-height: 1.6;
+  text-align: justify;
+}
+
+
+/* PORTFOLIO */
+
+.contenaire-section-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.folio {
+  width: 40%;
+  text-align: center;
+}
+
+.folio img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px black;
+  transition: 0.3s ease;
+}
+
+.folio img:hover {
+  filter: grayscale(100%);
+  transform: scale(1.02);
+}
+
+.folio p {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+
+/* CV - Expérience et Formation */
+
+.contenur-experience,
+.contenur-formation {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 15px;
+  margin: 20px auto;
+  border: 1px dotted #666;
+  padding: 15px;
+  border-radius: 5px;
+  width: 80%;
+}
+
+.contenur-experience h5, .contenur-formation h5 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.contenur-experience h6 {
+  font-size: 13px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+
+/* FORMULAIRE DE CONTACT */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  resize: vertical;
+  font-size: 14px;
+}
+
+button {
+  width: 30%;
+  align-self: center;
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.error-message {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+/* FOOTER */
+
+footer {
+  background-color: rgb(87, 81, 81);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 2px 2px 5px black;
+  margin-top: auto;
+}
+
+footer p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 950px) {
+  .principale {
+    grid-template-columns: 1fr;
+  }
+
+  aside img {
+    display: none;
+  }
+
+  header h1 {
+    font-size: 5vw;
+  }
+
+  header h2 {
+    font-size: 3.5vw;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .folio {
+    width: 90%;
+  }
+}

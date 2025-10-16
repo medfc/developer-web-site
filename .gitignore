@@ -1,0 +1,15 @@
+# Fichiers système
+.DS_Store
+
+
+# Cache VS Code
+.vscode/
+
+# Logs et sauvegardes
+*.log
+*.bak
+*.tmp
+
+# pour la géneration du site
+dist/
+build/
